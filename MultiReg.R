@@ -1,0 +1,5 @@
+cigar<-read.csv("cigarttes.csv")
+pairs(cigar[,2:8])
+cor(cigar[,2:8])
+Model<-lm(cigar$Sales~cigar$Age+cigar$HS+cigar$Income+cigar$Black+cigar$Female+cigar$Price)
+summary(Model)
